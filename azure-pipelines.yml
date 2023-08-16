@@ -1,0 +1,20 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseNode@1
+  inputs:
+    version: '16.19.1'
+  displayName: 'Use Node.js 16.19.1'
+
+- script: npm install --legacy-peer-deps
+  displayName: 'Install Dependencies'
+
+- script: npx eslint .
+  displayName: 'Run Eslint'
+
+- script: npm test
+  displayName: 'Run Tests'
+
+- script: npm run build
+  displayName: 'Build Project'
