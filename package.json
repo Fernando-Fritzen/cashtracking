@@ -1,7 +1,7 @@
 {
   "name": "cashtracking-api",
   "version": "0.0.1",
-  "description": "",
+  "description": "An app to track your custom finances",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
